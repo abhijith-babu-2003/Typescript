@@ -486,3 +486,28 @@ function handleInput(input: unknown) {
   let user :faces ={
    name :34
   }
+
+
+  //decorators
+
+  function First() {
+    console.log("First factory");
+    return function (target: any) {
+      console.log("First decorator");
+    };
+  }
+  @First()
+  class Demo {}
+
+  //maped types]
+  
+// type Readonly<T>={
+//   readonly[k in keyof T]?:T[k]
+// }
+
+//condiytional types
+
+// type IsString<T> = T extends string ? "Yes" : "No";
+
+// type A = IsString<string>;  // 'Yes'
+// type B = IsString<number>;  // 'No'

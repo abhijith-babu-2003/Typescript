@@ -12,7 +12,25 @@ class Car {
   let car1 = new Car("Toyota")
   car1.showBrand()
 
+//   interface Person{
+//     name:string;
+//     age:number
+// }
 
+// class Student implements Person{
+//     name:string;
+//     age:number
+//     constructor(name:string,age:number){
+//         this.age = age;
+//         this.name =name
+//     }
+//     showout(){
+//         console.log(`${this.name} age is :${this.age}`)
+//     }
+// }
+// let c1 = new Student("abhi",22)
+// c1.showout()
+ 
 
   // Method Overriding
   
@@ -46,6 +64,19 @@ class Parent {
   let math = new MathOperation()
   console.log(math.add(1,2,3))
   console.log(math.add(1,2))
+
+  // class Logger {
+  //   log(message: string): void;
+  //   log(id: number): void;
+  //   log(value: string | number): void {
+  //     console.log("Logged:", value);
+  //   }
+  // }
+  
+  // const logger = new Logger();
+  // logger.log("Hello");
+  // logger.log(123);
+  
 
 
   //encapsulation
@@ -145,6 +176,18 @@ c1.draw();
 //   myCar.move()
 
 
+// interface Vehicle{
+//   move():void
+  
+// }
+// class Car implements Vehicle{
+//     move(){
+//         console.log("car is moveing")
+//     }
+// }
+// const mycar =new Car()
+// mycar.move()
+
 
 //static method
 
@@ -158,3 +201,52 @@ c1.draw();
   
 //   console.log(utility.pi)
 //   console.log(utility.square(5))
+
+
+
+
+//acces modifiers
+
+// class Student {
+//   public name: string;
+//   private id: number;
+//   protected marks: number;
+
+//   constructor(name: string, id: number, marks: number) {
+//     this.name = name;
+//     this.id = id;
+//     this.marks = marks;
+//   }
+
+//   public showName() {
+//     console.log(this.name);     // ✅
+//     console.log(this.id);       // ✅
+//     console.log(this.marks);    // ✅
+//   }
+// }
+
+// const s = new Student("Abi", 101, 90);
+// console.log(s.name); // ✅
+// // console.log(s.id); // ❌ Error: private
+// // console.log(s.marks); // ❌ Error: protected
+
+
+//getters and setters
+
+// class Employee {
+//   private _salary: number = 0;
+
+//   get salary(): number {
+//     return this._salary;
+//   }
+
+//   set salary(value: number) {
+//     if (value >= 0) {
+//       this._salary = value;
+//     }
+//   }
+// }
+
+// const emp = new Employee();
+// emp.salary = 5000;
+// console.log(emp.salary); // 5000
